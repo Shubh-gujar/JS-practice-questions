@@ -660,34 +660,175 @@
 
 
 // Find GCD of two numbers
-
+// let a=12;
+// let b=18;
+// let gcd;
+// for(i=1; i<=a && i<=b; i++){
+//     if(a%i===0 && b%i===0){
+//         gcd=i
+//     }
+// }
+// console.log("gcd",gcd)
 
 
 // Find LCM of two numbers
-
+// let a=12;
+// let b=18;
+// let gcd;
+// for(i=1; i<=a && i<=b; i++){
+//     if(a%i===0 && b%i===0){
+//         gcd=i
+//     }
+// }
+// let lcm=(a*b)/gcd;
+// console.log("lcm",lcm)
 
 
 // Swap two numbers without using third variable
-
+// let a=10;
+// let b=20;
+// a=a+b;
+// b=a-b;
+// a=a-b;
+// console.log(a,b)
 
 // Count frequency of digits in a number
-
+// let num = 122333;
+// let freq = {};
+// while (num > 0) {
+//     let digit = num % 10;
+//     if (freq[digit]) {
+//         freq[digit]++;
+//     } else {
+//         freq[digit] = 1;
+//     }
+//     num = Math.floor(num / 10);
+// }
+// console.log(freq);
 
 // Print number pattern (triangle)
-
+// for(let i=1; i<=5; i++){
+//     let star="";
+//     for(j=1; j<=i; j++){
+//         star+=j;
+//     }
+//     console.log(star)
+// }
 
 
 // Print star pattern (pyramid)
-
+// for(let i=1; i<=5; i++){
+//     let star="";
+//     for(j=1; j<=i; j++){
+//         star+="*";
+//     }
+//     console.log(star)
+// }
 
 
 // Find missing number in an array
+// let arr = [1, 2, 3, 5];
+// let n = 5;
+// let formulaSum = (n * (n + 1)) / 2;
+// let actualSum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     actualSum += arr[i];
+// }
+// console.log(formulaSum - actualSum);
 
 
 
+// Difference between function scope and block scope
+// function scope
+// function test() {
+//     var x = 10;
+//     if (true) {
+//         var y = 20;
+//     }
+//     console.log(x); // 10
+//     console.log(y); // 20
+// }
+// test();
+
+// block scope
+// if (true) {
+//     let a = 10;
+//     const b = 20;
+// }
+// console.log(a); //error
+// console.log(b); //error
+
+// Shadowing of variables
+// let x = 10;
+// {
+//     let x = 20;
+//     console.log(x);
+// }
+// console.log(x);
 
 
+// Illegal shadowing
+// let a = 10;
+// {
+//     var a = 20;
+// }  // error
 
+// var a = 10;
+// {
+//     let a = 20;
+//     console.log(a); //20
+// }
+// console.log(a); //10
 
+// Scope chain example
+
+// let a = 5;
+// function test() {
+//     let b = 10;
+//     function inner() {
+//         console.log(a);
+//         console.log(b);
+//     }
+//     inner();
+// }
+// test();
+
+// Predict output with nested scopes
+
+// let x = 1;
+
+// function demo() {
+//     let x = 2;
+//     {
+//         let x = 3;
+//         console.log(x); //3
+//     }
+//     console.log(x); //2
+// }
+// demo();
+// console.log(x); //1
+
+// var a = 100;
+// {
+//     var a = 200;
+//     console.log(a); //200
+// }
+// console.log(a); //200 var scope follow nhi kar ta
+
+// Use const with arrays and objects
+
+// const arr=[1,2,3,4]
+// console.log(arr)
+
+// const object={
+//     name:"shubh",
+//     age:21
+// }
+// console.log(object);
+
+// Why const array elements can be modified?
+// const arr=[1,2];
+// arr=[3,4]; //error
+// arr[0]=10; //[10,2]
 
 
