@@ -831,4 +831,331 @@
 // arr=[3,4]; //error
 // arr[0]=10; //[10,2]
 
+// Use logical operators in expressions
 
+// let age = 20;
+// if (age >= 18 && age <= 60) {
+//     console.log("Eligible");
+// }
+
+// let day = "Sunday";
+// if (day === "Sunday" || day === "Holiday") {
+//     console.log("No work");
+// }
+
+// let a=6, b=5;
+// console.log(!(a>b))
+
+
+// Bitwise operators usage
+
+// AND  	&
+// OR       `
+// XOR	    ^
+// NOT 	    ~
+// Left Shift	<<
+// Right Shift	>>
+
+// What is Short-Circuiting?
+
+// && → pehla false milte hi stop
+// || → pehla true milte hi stop
+
+
+// Difference between ++i and i++
+// let I = 5;
+// console.log(++I); //6
+
+// let i = 5;
+// console.log(i++); //5
+// console.log(i); //6
+
+
+// Predict output using increment operators
+// let x = 5;
+// let y = x++ + ++x;
+// console.log(y); //12
+
+
+// Use assignment operators in expressions
+// let a = 10;
+// a += 5;  
+// a -= 3;  
+// a *= 2;  
+// a /= 4;   
+// console.log(a);
+
+
+// Convert if-else to switch
+// let day = 2;
+// if(day===1){
+//     console.log("Monday");
+// }else if(day===2){
+//     console.log("tuesday");
+// }else{
+//     console.log("invalid");
+// }
+
+// let day = 2;
+// switch(day){
+//     case 1:
+//         console.log("monday");
+//         break;
+//     case 2:
+//         console.log("tuesday");
+//         break;
+//     default:
+//         console.log("invalid");  
+// }
+
+// Use switch case for calculator
+
+// let a=10, b=20;
+// let operator = "+";
+// switch(operator){
+//     case "+":
+//         console.log(a+b);
+//         break;
+//     case "-":
+//         console.log(a-b);
+//         break;
+//     case "*":
+//         console.log(a*b);
+//         break;
+//     case "/":
+//         console.log(a/b);
+//         break;
+//     default:
+//         console.log("invalid operator");  
+// }
+
+
+// Nested conditionals examples
+// let age = 20;
+// if(age>=18){
+//     if(age <= 60){
+//         console.log("Eligible");
+//     }else{
+//         console.log("Over age");
+//     }
+// }else{
+//     console.log("Under age");
+// }
+
+
+// Validate input using conditions
+
+// let num=-5;
+// if(num>0){
+//     console.log("Valid number");
+// }else{
+//     console.log("Invalid number");
+// }
+
+// Check multiple conditions efficiently
+
+// let marks=85;
+// if(marks>=35 && marks<=100){
+//     console.log("Pass");
+// }else{
+//     console.log("Fail");
+// }
+
+// Nested loops example
+
+// for(let i=1; i<=5; i++){
+//     let star=""
+//     for(let j=1; j<=i; j++){
+//         star+="*";
+//     }
+//     console.log(star)
+// }
+
+// Pattern printing using nested loops
+
+// for(let i=1; i<=5; i++){
+//     let star=""
+//     for(let j=1; j<=i; j++){
+//         star+="*";
+//     }
+//     console.log(star)
+// }
+
+// Find duplicates in array using loops
+// let arr=[1,2,3,2,4,1];
+// for(let i=0;i<arr.length;i++){
+//     for(let j=i+1;j<arr.length;j++){
+//         if(arr[i]===arr[j]){
+//             console.log(arr[i]);
+//             break;
+//         }
+//     }
+// }
+
+
+// Break outer loop from inner loop
+// outerLoop:
+// for(let i=1; i<=5; i++){
+//     for(let j=1; j<=5; j++){
+//         if(i===1 && j===1){
+//             break outerLoop;
+//         }
+//     }
+// }
+// console.log("Loops stopped");
+
+// Count occurrences using loops
+
+// let arr = [1, 2, 2, 3, 2];
+// let count = 0;
+// for (let i=0; i<arr.length; i++) {
+//     if(arr[i]===2){
+//         count++;
+//     }
+// }
+// console.log(count);
+
+// Reverse array using loop
+
+// let arr=[1,2,3,4];
+// let rev=[];
+// for(let i=arr.length-1; i>=0; i--) {
+//     rev.push(arr[i]);
+// }
+// console.log(rev);
+
+// Find second largest number in array
+
+// let arr = [10, 5, 20, 8];
+// let largest = -Infinity;
+// let secondLargest = -Infinity;
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i]>largest){
+//         secondLargest = largest;
+//         largest = arr[i];
+//     }else if(arr[i]>secondLargest && arr[i]!==largest){
+//         secondLargest = arr[i];
+//     }
+// }
+// console.log(secondLargest);
+
+
+// Sort an array manually
+// let arr = [4, 2, 5, 1, 3];
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//         if (arr[i] > arr[j]) {
+//             let temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp;
+//         }
+//     }
+// }
+
+// console.log(arr);
+// Initial: [5, 2, 8, 1]
+// Compare 5 & 2 → swap → [2, 5, 8, 1]
+// Compare 2 & 1 → swap → [1, 5, 8, 2]
+// Compare 5 & 2 → swap → [1, 2, 8, 5]
+// Compare 8 & 5 → swap → [1, 2, 5, 8]
+
+
+// Remove duplicates from array
+// let arr=[1,2,3,2,1];
+// let unique=[];
+// for(let i=0; i<arr.length; i++){
+//     if(!unique.includes(arr[i])){
+//         unique.push(arr[i]);
+//     }
+// }
+// console.log(unique);
+
+// Merge two arrays
+
+// let a=[1,2,3];
+// let b=[4,5,6];
+// let marge=[]
+// for(i=0; i<a.length; i++){
+//     marge.push(a[i]);
+// }
+// for(i=0; i<b.length; i++){
+//     marge.push(b[i]);
+// }
+// console.log(marge)
+
+
+// Find intersection of two arrays
+
+// let arr1 = [1, 2, 3, 4];
+// let arr2 = [3, 4, 5, 6];
+// let intersection = [];
+// for (let i = 0; i < arr1.length; i++) {
+//     for(let j=0; j<arr2.length; j++){
+//         if(arr1[i]===arr2[j] && !intersection.includes(arr1[i])){
+//             intersection.push(arr1[i]);
+//         }
+//     }
+// }
+// console.log(intersection);
+
+// Find union of two arrays
+
+// let arr1 = [1,2,3];
+// let arr2 = [3,4,5];
+// let union = [];
+// for(let i = 0; i < arr1.length; i++){
+//     if(!union.includes(arr1[i])){
+//         union.push(arr1[i]);
+//     }
+// }
+// for(let i = 0; i < arr2.length; i++){
+//     if(!union.includes(arr2[i])){
+//         union.push(arr2[i]);
+//     }
+// }
+// console.log(union);
+
+
+// Rotate array by K positions
+
+// let arr = [1, 2, 3, 4, 5];
+// let k = 2;
+// for(let i=0; i<k; i++){
+//     let last=arr.pop();
+//     arr.unshift(last);
+// }
+// console.log(arr);
+
+// Count frequency of elements
+
+// let arr=[1,2,2,3,1];
+// let freq={};
+// for(let i=0; i<arr.length; i++){
+//     if(freq[arr[i]]){
+//     freq[arr[i]]++;
+//   }else{
+//     freq[arr[i]] = 1;
+//     }
+// }
+// console.log(freq);
+
+
+// Flatten nested array (1 level)
+
+
+
+// Check if array is sorted
+
+// let arr=[1,2,3,4];
+// let isSorted = true;
+// for(let i=0; i<arr.length-1; i++){
+//     if(arr[i]>arr[i+1]){
+//     isSorted = false;
+//     break;
+//     }
+// }
+// if(isSorted){
+//     console.log("Array is sorted");
+// }else{
+//     console.log("Array is not sorted");
+// }
