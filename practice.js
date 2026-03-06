@@ -1755,3 +1755,187 @@
 //     return userage.age>20;
 // })
 // console.log(s)
+
+// Closure   ////  //  //  // 
+
+// Closure tab banta hai jab ek function apne outer function ke variables ko access karta hai, even jab outer function execute ho chuka ho.
+// Inner function ko outer function ka variables yaad rehta hai
+
+// function outer(){
+//     let name = "Shubh";
+//     function inner(){
+//         console.log(name);
+//     }
+//     inner();
+// }
+// outer();
+
+
+// Outer function already finish ho chuka he fir bhi count variable memory me saved rehta he
+
+// function outer(){
+//     let count = 0;
+//     function inner(){
+//         count++;
+//         console.log(count);
+//     }
+//     return inner;
+// }
+// let a=outer()
+// a()
+// a()
+
+
+// function x(){
+//     let a=2;
+//     function y(){
+//         console.log(a);
+//     }
+//     return y
+// }
+// let z=x();
+// console.log(z);
+// z()
+
+
+//  Debounce  //// //// ////
+
+//  Debounce ek technique hai jisme function tabhi run hota hai jab user kuch time tak koi action na kare.
+                                          
+// let counter=0;                        // jast like serchbar jisme ham kuch search karte he kuch likhate he or thodasa ruk jate he to niche jo options aa jate he search hoke uske jesa kam karta he
+// let getData=()=>{
+//     console.log("fetching Data...",counter++);
+// }
+// let doSome = function(fn,d){
+//     let timer;
+//     return function(){
+//         let context=this,
+//         args=arguments;
+//         clearTimeout(timer);
+//         timer=setTimeout(()=>{
+//             getData.apply(context,arguments);
+//         },d);
+//     }
+// }
+// let betterFunction= doSome(getData,300);
+
+//  callback          // // //
+
+// function greet(name){
+//     console.log("Hello "+name);
+// }
+// function processUser(callback){
+//     let name="Shubh";
+//     callback(name);
+// }
+// processUser(greet);
+
+// setTimeout(() => {
+//    console.log("hello shubh") 
+// }, 2000);
+
+
+//  Event Loop  // // //
+ 
+//  Event Loop JavaScript ka ek mechanism hai jo decide karta hai ki kaunsa code kab run hoga
+//  Event Loop check karta hai Call Stack aur Callback Queue ko aur jo ready ho usko execute kar deta hai
+//  Event Loop Callback Queue or Microtask Queue mese sabse jyada empoten Microtask ko deta he
+//  Event Loop continuously check karta hai  Call Stack empty hai ya nahi Agar empty hai to Callback Queue ka function stack me bhej deta he 
+
+// Ternary // // //
+
+// Ternary operator ek short way hai if  else likhne ka
+// agar condition true hai  value1
+// agar condition false hai  value2
+
+// let age = 18;
+// let result = age >= 18 ? "You can vote" : "You cannot vote";
+// console.log(result);
+
+// let number=10;
+// let result=number%2===0 ? "Even" : "Odd";
+// console.log(result);
+
+//  setTimeout   ////  //  ////
+
+//  setTimeout ek function hai jo kisi function ko ek certain time delay ke baad run karta hai
+
+// console.log("Start");
+// setTimeout(function(){
+//     console.log("Hello Shubh");
+// },2000);                               // 2000ms = 2s
+// console.log("End");
+
+// setTimeout(()=>{
+//     console.log("Hello Shubh");
+// },3000);                                   // 3000  = 3s
+
+
+// let timer = setTimeout(()=>{
+//     console.log("Hello");
+// },3000);
+// clearTimeout(timer);                   //  settimeout ko cancel kar diya
+
+
+// setInterval ek function hai jo kisi function ko bar-bar ek fixed time interval par run karta hai
+
+// setInterval(()=>{
+//     console.log("Hello");                      //  Hello har 2 second me run hota rahega  hello hello aata hi rahe ga
+// },2000);
+
+
+// Shallow copy
+
+// Shallow copy me object ka sirf top level copy hota hai, lekin andar ke objects same reference share karte hai
+// Shallow copy outer object ko copy karta hai lekin andar ke objects same reh jate hai.
+
+// let obj1={
+//     name:"Shubh",
+//     address:{
+//         city:"Vadodara"
+//     }
+// };
+// let obj2={...obj1};           // Shallow copy
+// obj2.name="Rahul";
+// obj2.address.city ="Surat";
+// console.log(obj1);
+// console.log(obj2);
+
+// Deep copy
+
+// Deep copy me pura object aur uske andar ke objects bhi alag memory me copy hote hai.
+// Original object aur copy completely independent hote hai
+// Creates a completely independent copy of an object including all nested objects.
+
+// let obj1={
+//     name: "Shubh",
+//     address:{
+//         city: "Vadodara"
+//     }
+// };
+// let obj2 = JSON.parse(JSON.stringify(obj1));
+// obj2.address.city = "Surat";
+// console.log(obj1);
+// console.log(obj2);
+
+//  Promise.all()
+
+//  Promise.all() ek method hai jo multiple promises ko ek sath run karta hai aur jab sab promises resolve ho jate hai tab result return karta hai.
+//  Sab complete hone ke baad array me result milta hai
+//  Agar ek bhi promise fail ho gaya → Promise.all reject ho jata hai
+
+// let p1 = new Promise((resolve)=>{
+//     setTimeout(()=>{
+//         resolve("Task 1 done");
+//     },2000);
+// });
+// let p2 = new Promise((resolve)=>{
+//     setTimeout(()=>{
+//         resolve("Task 2 done");
+//     },1000);
+// });
+// Promise.all([p1,p2])
+// .then((data)=>{
+//     console.log(data);
+// });
+
