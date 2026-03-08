@@ -1658,6 +1658,9 @@
 // greet()
 
 
+// console.log(this)
+
+
 // let user={
 //     name:"shubh",
 //     age:21,
@@ -1924,6 +1927,7 @@
 //  Sab complete hone ke baad array me result milta hai
 //  Agar ek bhi promise fail ho gaya → Promise.all reject ho jata hai
 
+
 // let p1 = new Promise((resolve)=>{
 //     setTimeout(()=>{
 //         resolve("Task 1 done");
@@ -1939,3 +1943,43 @@
 //     console.log(data);
 // });
 
+// Nullish Coalescing (??)  //  //  //  //
+
+// Nullish Coalescing (??) JavaScript me ek operator hai jo default value dene ke liye use hota he lekin sirf tab jab value null ya undefined ho
+
+// Nullish Coalescing (??) ek logical operator hai jo left side ki value return karta hai,
+// lekin agar left side null ya undefined ho, tab right side ki value return karta hai.
+
+// let age=21;
+// let result= age??23;
+// console.log(result)
+
+// let age=null;
+// let result= age??23;
+// console.log(result)
+
+// let age;
+// let result= age??22;
+// console.log(result)
+
+// function userName(name){
+//     return result = name ?? "mohit"
+// }
+// console.log(userName("shubh"))
+// console.log(userName())
+// console.log(userName(null))
+
+// let user = {
+//     name: "Shubh",
+//     age: null
+// };
+// let userAge = user.age ?? 18;
+// console.log(userAge);
+
+// reduce //// //
+
+// let number=[1,2,3,4,5];
+// let sum=number.reduce((acc,num)=>{
+//     return acc+num;
+// },0);
+// console.log(sum)
